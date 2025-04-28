@@ -7,104 +7,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
+    body, html {
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
-      color: #333;
+      font-family: 'Poppins', sans-serif;
       scroll-behavior: smooth;
+      background: #f7f9fc;
+      color: #333;
+    }
+    .hero {
+      background: url('vikrant-image.jpg') center/cover no-repeat;
+      height: 100vh;
       display: flex;
       flex-direction: column;
-      min-height: 100vh;
-    }
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: 40px auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      animation: fadeInUp 1s ease;
-      flex: 1;
-    }
-    .header {
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      animation: fadeInDown 1s ease;
+      background-blend-mode: overlay;
+      background-color: rgba(0, 123, 255, 0.6);
+      color: white;
     }
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
-    h1 {
-      margin: 10px 0;
-      font-weight: 700;
+    .hero p {
+      font-size: 22px;
     }
     .section {
-      margin-top: 40px;
-      animation: fadeInUp 1.5s ease;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
     .section h2 {
-      position: relative;
-      display: inline-block;
-      padding-bottom: 5px;
+      text-align: center;
       margin-bottom: 20px;
-      font-weight: 700;
-    }
-    .section h2::after {
-      content: '';
-      width: 50px;
-      height: 3px;
-      background: #007BFF;
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      border-radius: 5px;
+      color: #007BFF;
     }
     ul {
       padding-left: 20px;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 15px;
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
     }
-    table, th, td {
-      border: 1px solid #ddd;
-    }
-    th, td {
-      padding: 10px;
+    .card {
+      background: #f0f4f8;
+      padding: 20px;
+      border-radius: 10px;
       text-align: center;
+      transition: 0.3s;
     }
-    .contact-links a {
-      display: inline-block;
-      margin: 10px;
-      text-decoration: none;
-      color: #007BFF;
-      font-weight: 500;
-      font-size: 20px;
-    }
-    .contact-links a i {
-      margin-right: 8px;
-    }
-    .resume-btn {
-      display: inline-block;
+    .card:hover {
       background: #007BFF;
       color: white;
-      padding: 12px 25px;
-      margin-top: 20px;
-      text-decoration: none;
-      border-radius: 25px;
-      transition: background 0.3s;
-      font-weight: 500;
-    }
-    .resume-btn:hover {
-      background: #0056b3;
     }
     footer {
       text-align: center;
@@ -113,128 +74,73 @@
       color: white;
       font-size: 14px;
     }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
     @media (max-width: 600px) {
-      .profile-pic {
-        width: 100px;
-        height: 100px;
+      .hero h1 {
+        font-size: 32px;
       }
-      .resume-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-      }
-      h1 {
-        font-size: 22px;
+      .hero p {
+        font-size: 18px;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="header">
-      <img src="vikrant-image.jpg" alt="Vikrant Nishad" class="profile-pic">
-      <h1>Vikrant Nishad</h1>
-      <p>Project Manager | Electrical Engineer | MEP Expert</p>
-      <div class="contact-links">
-        <a href="mailto:vikrant.nishadpro@gmail.com"><i class="fas fa-envelope"></i>Email</a>
-        <a href="https://linkedin.com/in/vikrant-nishad-87828683" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      </div>
-      <a class="resume-btn" href="vikrant-cv.pdf" download>Download Resume</a>
-    </div>
+  <div class="hero">
+    <h1>Vikrant Nishad</h1>
+    <p>Project Manager | Electrical Engineer | MEP Expert</p>
+  </div>
 
-    <div class="section">
-      <h2>Profile Summary</h2>
-      <p>Dynamic and accomplished Project Manager and Electrical Engineer with 10+ years of experience managing projects across pharmaceuticals, data centers, corporate fit-outs, and hospitality sectors. Recognized for delivering high-quality results on time and within budget.</p>
-    </div>
+  <div class="section">
+    <h2>About Vikrant</h2>
+    <p>Dynamic and accomplished Project Manager and Electrical Engineer with over 10 years of experience delivering high-value projects across pharmaceuticals, data centers, corporate fit-outs, and hospitality sectors. Proficient in project lifecycle management, MEP systems, vendor negotiations, and stakeholder management across India and Gulf regions.</p>
+  </div>
 
-    <div class="section">
-      <h2>Core Competencies</h2>
-      <ul>
-        <li>Project Lifecycle Management</li>
-        <li>MEP Systems Design & Execution</li>
-        <li>Data Centers and Retrofit Projects</li>
-        <li>Vendor Negotiation & Stakeholder Management</li>
-        <li>Project Scheduling & Cost Control</li>
-        <li>Multicultural Team Leadership</li>
-      </ul>
+  <div class="section">
+    <h2>Core Competencies</h2>
+    <div class="grid">
+      <div class="card">Project Lifecycle Management</div>
+      <div class="card">MEP Systems Design & Execution</div>
+      <div class="card">Data Centers & Retrofit Projects</div>
+      <div class="card">Vendor Negotiation</div>
+      <div class="card">Project Scheduling & Cost Control</div>
+      <div class="card">Multicultural Team Leadership</div>
     </div>
+  </div>
 
-    <div class="section">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Project Management Professional (PMP) - In Progress</li>
-        <li>LEED Green Associate - Planned</li>
-        <li>Electrical AutoCAD Certification</li>
-        <li>Advanced SAP Procurement & Quality Management Training</li>
-      </ul>
+  <div class="section">
+    <h2>Certifications</h2>
+    <div class="grid">
+      <div class="card">PMP (In Progress)</div>
+      <div class="card">LEED Green Associate (Planned)</div>
+      <div class="card">Electrical AutoCAD Certification</div>
+      <div class="card">SAP Procurement & Quality Management</div>
     </div>
+  </div>
 
-    <div class="section">
-      <h2>Work Experience</h2>
-      <ul>
-        <li><strong>Project Manager</strong> - Colliers International, Mumbai (2023–Present)</li>
-        <li><strong>Project Lead</strong> - Jones Lang LaSalle (JLL), Navi Mumbai (2022–2023)</li>
-        <li><strong>Assistant Project Manager</strong> - CBRE South Asia Pvt. Ltd., Mumbai (2018–2022)</li>
-        <li><strong>MEP Engineer Consultant</strong> - Varun Hydrotech Consultant, Mumbai (2017–2018)</li>
-        <li><strong>Electrical Engineer</strong> - Voltas Oman LLC, Muscat, Oman (2015–2017)</li>
-      </ul>
-    </div>
+  <div class="section">
+    <h2>Work Experience</h2>
+    <ul>
+      <li>Project Manager - Colliers International (2023–Present)</li>
+      <li>Project Lead - JLL, Navi Mumbai (2022–2023)</li>
+      <li>Assistant Project Manager - CBRE South Asia Pvt. Ltd. (2018–2022)</li>
+      <li>MEP Engineer Consultant - Varun Hydrotech Consultant (2017–2018)</li>
+      <li>Electrical Engineer - Voltas Oman LLC (2015–2017)</li>
+    </ul>
+  </div>
 
-    <div class="section">
-      <h2>Education</h2>
-      <p>Bachelor of Engineering (Electrical) — North Maharashtra University (2014) | 72.53%</p>
-    </div>
-
-    <div class="section">
-      <h2>Significant Projects</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Client</th>
-            <th>Value</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Studio & High-End Fit-Out</td>
-            <td>Bloomberg, Mumbai</td>
-            <td>₹25 Cr</td>
-          </tr>
-          <tr>
-            <td>PoE Tech Upgrade</td>
-            <td>CISCO, Mumbai</td>
-            <td>₹15 Cr</td>
-          </tr>
-          <tr>
-            <td>Corporate HO Fitout</td>
-            <td>Bajaj Electricals, Mumbai</td>
-            <td>₹20 Cr</td>
-          </tr>
-          <tr>
-            <td>E&L Lab Retrofit</td>
-            <td>TEVA, Navi Mumbai</td>
-            <td>₹6 Cr</td>
-          </tr>
-          <tr>
-            <td>Corporate Fit-Out</td>
-            <td>J.P. Morgan, Mumbai</td>
-            <td>₹40 Cr</td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="section">
+    <h2>Key Projects</h2>
+    <div class="grid">
+      <div class="card">Studio & Fit-Out - Bloomberg Mumbai</div>
+      <div class="card">PoE Tech Upgrade - CISCO Mumbai</div>
+      <div class="card">Corporate HO Fitout - Bajaj Electricals</div>
+      <div class="card">E&L Lab Retrofit - TEVA Navi Mumbai</div>
+      <div class="card">Corporate Fit-Out - J.P. Morgan Mumbai</div>
     </div>
   </div>
 
   <footer>
-    Thank you for visiting! &nbsp; | &nbsp; © 2025 Vikrant Nishad
+    Thank you for visiting! | © 2025 Vikrant Nishad
   </footer>
 </body>
 </html>

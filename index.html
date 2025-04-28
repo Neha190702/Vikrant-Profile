@@ -4,25 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vikrant Nishad - Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f7f8;
+      background: linear-gradient(135deg, #e0f7fa, #ffffff);
       color: #333;
+      scroll-behavior: smooth;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
     .container {
       width: 90%;
       max-width: 1000px;
       margin: 40px auto;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      animation: fadeInUp 1s ease;
+      flex: 1;
     }
     .header {
       text-align: center;
+      animation: fadeInDown 1s ease;
     }
     .profile-pic {
       width: 150px;
@@ -30,16 +40,32 @@
       border-radius: 50%;
       object-fit: cover;
       margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     h1 {
       margin: 10px 0;
+      font-weight: 700;
     }
     .section {
-      margin-top: 30px;
+      margin-top: 40px;
+      animation: fadeInUp 1.5s ease;
     }
     .section h2 {
-      border-bottom: 2px solid #007BFF;
+      position: relative;
+      display: inline-block;
       padding-bottom: 5px;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    .section h2::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: #007BFF;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      border-radius: 5px;
     }
     ul {
       padding-left: 20px;
@@ -50,10 +76,10 @@
       margin-top: 15px;
     }
     table, th, td {
-      border: 1px solid #ccc;
+      border: 1px solid #ddd;
     }
     th, td {
-      padding: 8px;
+      padding: 10px;
       text-align: center;
     }
     .contact-links a {
@@ -61,18 +87,53 @@
       margin: 10px;
       text-decoration: none;
       color: #007BFF;
+      font-weight: 500;
+      font-size: 20px;
+    }
+    .contact-links a i {
+      margin-right: 8px;
     }
     .resume-btn {
       display: inline-block;
       background: #007BFF;
       color: white;
-      padding: 10px 20px;
+      padding: 12px 25px;
       margin-top: 20px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 25px;
+      transition: background 0.3s;
+      font-weight: 500;
     }
     .resume-btn:hover {
       background: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #007BFF;
+      color: white;
+      font-size: 14px;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @media (max-width: 600px) {
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+      .resume-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+      }
+      h1 {
+        font-size: 22px;
+      }
     }
   </style>
 </head>
@@ -83,8 +144,8 @@
       <h1>Vikrant Nishad</h1>
       <p>Project Manager | Electrical Engineer | MEP Expert</p>
       <div class="contact-links">
-        <a href="mailto:vikrant.nishadpro@gmail.com">Email</a>
-        <a href="https://linkedin.com/in/vikrant-nishad-87828683" target="_blank">LinkedIn</a>
+        <a href="mailto:vikrant.nishadpro@gmail.com"><i class="fas fa-envelope"></i>Email</a>
+        <a href="https://linkedin.com/in/vikrant-nishad-87828683" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn</a>
       </div>
       <a class="resume-btn" href="vikrant-cv.pdf" download>Download Resume</a>
     </div>
@@ -171,7 +232,10 @@
         </tbody>
       </table>
     </div>
-
   </div>
+
+  <footer>
+    Thank you for visiting! &nbsp; | &nbsp; © 2025 Vikrant Nishad
+  </footer>
 </body>
 </html>
